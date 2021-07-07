@@ -1,0 +1,52 @@
+Ansible has two ways to reuse playbook
+======================================
+1) Include 
+2) Roles
+
+Using Roles
+The roles struture 
+How to create roles with ansible Galaxy
+
+what is ansible role?
+Roles in ansible is a pre-defined directory structure that is utilized to put the indivitual piecies of
+playbook in to , to make it easier to re-use and share .
+
+In Ansible , the role is the primary mechanishm for breaking a playbook into multiple files , This 
+simplifies writing complex paybooks and it make them easier to reuse.
+
+Roles are not playbook , Roles are small functionality which can be independently used but have to be 
+used within playbooks.
+
+
+What is the advantage of ansible rols?
+Ansible roles are independent with each other , to that the execution of one role doesn't depend on other role 
+And Hence they can be resued .
+
+How to create ansible rols?
+To create a role , a tool called Anaible-Galaxy Comes bundle with ansible . we can use the below syntax 
+
+# ansible-galaxy init rolename 
+# ansible-galaxy init samplerolename 
+
+What are the components of role?
+
+1. Defaults: Data about the role/Application , default variables
+2.files: put the sttic files here , Files will then be copied on remote machines 
+3.handlers: Task which based on some actions. Triggers 
+Example: in case my httpd.conf changes , it should trigger service restart .
+4. Meta: Information about the Role   like author, support platform like that ..Dependencies if any ...
+5.Tasks: Actual actions will be stored inside ...core Logic or code . Installting package , coping files ..etc.
+6.Template: its simillar to files exept the tempates support dynamic files . jinja2 - tempate language 
+7.vars= Both vars and defaults stores variables.variables store under "vars" has higher priority and 
+difficult to override.
+
+
+
+
+
+
+
+
+
+
+
