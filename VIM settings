@@ -10,4 +10,4 @@ set colorcolumn=80
 highlight colorcolumn ctermbg=0 guibg=lightgrey
 ~
 ~
-nee to set ~vi .vim
+nee to set ~vi .vim.
